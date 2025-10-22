@@ -1,0 +1,30 @@
+create database University; 
+use University;
+create table employees(
+FirstName varchar(30),
+LastName varchar(30),
+ReportingTo varchar(60)
+);
+insert into employees (FirstName,LastName,ReportingTo)values("Alina","Asad", "Miss.TazzainaMalik");
+insert into employees (FirstName,LastName,ReportingTo)values("Amna","Ashfaq","Miss.TahiraNazir"); 
+insert into employees (FirstName,LastName,ReportingTo)values("Maira","Asfandyar","Miss.AsiaShahid"); 
+insert into employees (FirstName,LastName,ReportingTo)values("Fatima", "Bukhari","Miss.SabahatMustafa"); 
+insert into employees (FirstName,LastName,ReportingTo)values("Wajiha","Aqdas", "Miss.TahiraNazir"); 
+insert into employees (FirstName,LastName,ReportingTo)values("Malaika","Safeer", "Miss.TahiraNazir"); 
+select* from employees;
+
+create database University; 
+use University;
+create table employees(
+FirstName varchar(30),
+LastName varchar(30),
+ReportingTo varchar(60)
+);
+insert into employees (FirstName,LastName,ReportingTo)values("Alina","Asad", "Miss.TazzainaMalik");
+insert into employees (FirstName,LastName,ReportingTo)values("Amna","Ashfaq","Miss.TahiraNazir"); 
+insert into employees (FirstName,LastName,ReportingTo)values("Maira","Asfandyar","Miss.AsiaShahid"); 
+insert into employees (FirstName,LastName,ReportingTo)values("Fatima", "Bukhari","Miss.SabahatMustafa"); 
+insert into employees (FirstName,LastName,ReportingTo)values("Wajiha","Aqdas", "Miss.TahiraNazir"); 
+insert into employees (FirstName,LastName,ReportingTo)values("Malaika","Safeer", "Miss.TahiraNazir"); 
+select FirstName,LastName,ReporingTo from employees  where ReportingTo="Miss.TahiraNazir";
+
