@@ -1,0 +1,41 @@
+CREATE TABLE Authors (
+Authorld AUTOINCREMENT PRIMARY KEY,
+FirstName TEXT(50),
+LastName TEXT(50),
+Birthdate DATE, Nationality TEXT(50));
+CREATE TABLE Books (
+Bookld AUTOINCREMENT PRIMARY KEY,
+Title TEXT(255),
+Genre TEXT(50),
+PublicationYear INT,
+ISBN TEXT(20),
+Authorld INT,
+FOREIGN KEY (Authorld) REFERENCES Authors(Authorld));
+
+INSERT INTO Authors (FirstName, LastName, Birthdate, Nationality) VALUES ('Evelyn', 'Stormrider', #1972-03-15#, 'Canadian');
+INSERT INTO Authors (FirstName, LastName, Birthdate, Nationality) VALUES ('Kael', 'Rutherford', #1980-11-02#, 'Australian');
+INSERT INTO Authors (FirstName, LastName, Birthdate, Nationality) VALUES ('Mira', 'Duskbane', #1965-07-19#, 'Irish');
+INSERT INTO Authors (FirstName, LastName, Birthdate, Nationality) VALUES ('Orion', 'Ashcroft', #1990-01-23#, 'British');
+INSERT INTO Authors (FirstName, LastName, Birthdate, Nationality) VALUES ('Selena', 'Nightbloom', #1978-05-05#, 'American');
+INSERT INTO Authors (FirstName, LastName, Birthdate, Nationality) VALUES ('Tobias', 'Wraithmore', # 1984-09-12#, 'German");
+INSERT INTO Authors (FirstName, LastName, Birthdate, Nationality) VALUES ('Lyra', 'Moonfall", # 1992-12-30#, 'French');
+INSERT INTO Authors (FirstName, LastName, Birthdate, Nationality) VALUES ('Dorian', 'Frostwind', #1971-04-07#, 'Norwegian');
+INSERT INTO Authors (FirstName, LastName, Birthdate, Nationality) VALUES ('Aria', 'Blackthorne', #1988-06-18#, 'Spanish');
+INSERT INTO Authors (FirstName, LastName, Birthdate, Nationality) VALUES ('Cassian', 'Drake', #1976-08-25#, 'Italian");
+
+INSERT INTO Books (Title, Genre, PublicationYear, ISBN, Authorld) VALUES ('The Clockwork Paradox', 'Science Fantasy', 2017, '9781110001234', 1);
+INSERT INTO Books (Title, Genre, PublicationYear, ISBN, Authorld)VALUES ('Whales Beneath Mars', 'Sci-Fi Adventure', 2020, '9782220005678', 2);
+INSERT INTO Books (Title, Genre, PublicationYear, ISBN, Authorld) VALUES ('Lanterns of the Abyss', 'Dark Fantasy', 2015, 9783330009876', 3);
+INSERT INTO Books (Title, Genre, PublicationYear, ISBN, Authorld)VALUES ('Algorithms of Dreams', 'Philosophical Fiction', 2021, '9784440012345', 4);
+INSERT INTO Books (Title, Genre, PublicationYear, ISBN, Authorld)VALUES ('Crows Don't Sing at Dawn', 'Mystery', 2018, '9785550016789', 5);
+INSERT INTO Books (Title, Genre, PublicationYear, ISBN, Authorld) VALUES ('The Glass Orchard', 'Magical Realism', 2016, 9786660023456', 6);
+INSERT INTO Books (Title, Genre, PublicationYear, ISBN, Authorld) VALUES ('Dust on the Piano Keys', 'Drama', 2019, '9787770032109', 7);
+INSERT INTO Books (Title, Genre, PublicationYear, ISBN, Authorld) VALUES ('Binary Souls', 'Cyberpunk', 2022, 9788880045678', 8);
+INSERT INTO Books (Title, Genre, PublicationYear, ISBN, Authorld)VALUES ('Echoes of Forgotten Maps', 'Historical Adventure', 2014, 9789990056789', 9);
+INSERT INTO Books (Title, Genre, PublicationYear, ISBN, Authorld)VALUES ('Symphony for a Broken Satellite', 'Space Opera', 2023, '9781010067890', 10);
+
+UPDATE Books SET Title = 'The Lost Woods', Genre = 'Thriller' WHERE Bookld = 5;
+UPDATE Books SET Title = 'The Garden That Bloomed Roses', PublicationYear=2012 WHERE BookId=7;
+UPDATE Authors SET Nationality = 'Canadian-American', Birthdate = #1979-05-05# WHERE FirstName = 'Selena' AND LastName = 'Nightbloom';
+UPDATE Authors SET Nationality = 'Belgian', Birthdate = #1993-12-30# WHERE FirstName = 'Lyra' AND LastName = 'Moonfall";
+DELETE FROM Books WHERE Bookld IN (2, 4, 9);
